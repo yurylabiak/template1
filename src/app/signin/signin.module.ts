@@ -10,10 +10,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { SignupRoutingModule } from './signup-routing.module';
-import { SignupComponent } from './signup/signup.component';
-import { SignupAgreeComponent } from './signup-agree/signup-agree.component';
-import { SignupSuccessComponent } from './signup-success/signup-success.component';
+import { SigninRoutingModule } from './signin-routing.module';
+import { SigninComponent } from './signin/signin.component';
+
 
 @NgModule({
   imports: [
@@ -23,12 +22,14 @@ import { SignupSuccessComponent } from './signup-success/signup-success.componen
     MatInputModule,
     MatCheckboxModule,
     MatButtonModule,
-    SignupRoutingModule,
     ReactiveFormsModule,
     MatIconModule,
     MatButtonToggleModule,
     MatSlideToggleModule,
+
+    SigninRoutingModule,
+
   ],
-  declarations: [SignupComponent, SignupAgreeComponent, SignupSuccessComponent]
+  declarations: [SigninComponent],
 })
-export class SignupModule {}
+export class SigninModule { }

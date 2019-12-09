@@ -13,18 +13,21 @@
     // justify-content: center;
 
     .title-area {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);  
-      width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);  
+        width: 100%;
+        .tree-img {
+            margin-top: 25vh;
+            margin-bottom: 5vh;
+        }
     }
-
     .login-form {
       margin-left: 7vw;
       padding: 40px;
       background: $white;
-      max-width: 600px;
+      max-width: 500px;
       // box-shadow: 0 0 20px #ddd;
       input:-webkit-autofill {
         box-shadow: 0 0 0 30px $white inset;
@@ -43,6 +46,17 @@
       position: absolute;
       top: 30px;
       right: 30px;
+    }
+
+    .right-container {
+        text-align: center;
+        .message-img {
+            margin-top: 5vh;
+            margin-bottom: 4vh;
+        }
+        .resend-button {
+            margin-top: 3vh;
+        }
     }
   }
   @media only screen and (min-width: 750px) and (max-width: 100vw) {
