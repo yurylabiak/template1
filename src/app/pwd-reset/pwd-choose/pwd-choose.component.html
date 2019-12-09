@@ -1,0 +1,47 @@
+<div class="main-page">
+    <div class="content row align-content-center px20">
+        <img class="logo" src="assets/images/CBN-Expert-Logo.png" />
+
+        <div class="col-6 text-lg-center">
+            <div class="title-area">
+                <p class="title-text">Join us on the journey to<br> a low carbon future.</p>
+                <br>
+                <p class="title-text">Sign up to become<br> Carbon Smart.</p>
+            </div>
+        </div>
+
+        <div class="col-6 ">
+            <form [formGroup]="loginForm" class="login-form" (ngSubmit)="pwdChoose()">
+                <div class="text-left">
+                    <p class="page-name"><span class="normal-font-color">Choose Your Password</span></p>
+                </div>
+                <div fxLayout="row">
+                    <div fxFlexFill>
+                        <mat-form-field class="w-100">
+                            <input formControlName="password" matInput type="password" placeholder="Password"
+                                (ngModelChange)="updateValue()">
+                            <mat-icon matSuffix>lock</mat-icon>
+                            <mat-error>
+                                <span *ngIf="formController.password.hasError('required')">Please enter a valid
+                                    password</span>
+                            </mat-error>
+                            <span class="password-warning" *ngIf="passwordInvalid">Wrong Password. <br>Try again or
+                                click Forgot password to reset it!</span>
+                        </mat-form-field>
+                        <mat-form-field class="w-100">
+                            <input formControlName="confirmPassword" matInput type="password"
+                                placeholder="Confirm Password">
+                            <mat-icon matSuffix>lock_open</mat-icon>
+                            <mat-error>
+                                <span *ngIf="formController.confirmPassword.hasError('required')">Please enter a valid
+                                    confirm password</span>
+                                <div *ngIf="formController.confirmPassword.errors.mustMatch">*Please check your passwords match</div>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button class="sign-btn mb-3" type="submit" mat-raised-button color="success">Done</button>
+            </form>
+        </div>
+    </div>
+</div>

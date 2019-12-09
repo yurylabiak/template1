@@ -1,0 +1,101 @@
+@import '~src/scss/variables';
+
+.main-page {
+  display: flex;
+  height: 100%;
+  position: relative;
+  .content {
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    .title-area {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);  
+      width: 100%;
+    }
+
+    .login-form {
+      margin-left: 7vw;
+      margin-bottom: 25vh;
+      padding: 40px;
+      background: $white;
+      max-width: 600px;
+      // box-shadow: 0 0 20px #ddd;
+      input:-webkit-autofill {
+        box-shadow: 0 0 0 30px $white inset;
+        -webkit-box-shadow: 0 0 0 30px $white inset;
+      }
+      .term-checkbox {
+        position: absolute;
+        margin-top: 20px;
+      }
+      .sign-btn {
+        margin-top: 20px;
+      }
+      .assist-items {
+        margin-top: 20px;
+        div {
+          padding: 0;
+        }
+        a {
+          p {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+
+    .logo {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+    }
+  }
+  @media only screen and (min-width: 750px) and (max-width: 100vw) {
+    &:after {
+      content: '';
+      background: $white;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      bottom: 0;
+      right: 0;
+    }
+    &:before {
+      content: '';
+      background: var(--app-color-grad);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 50%;
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 749px) {
+    &:after {
+      content: '';
+      background: var(--app-color-grad);
+      position: absolute;
+      top: 0;
+      left: 0%;
+      bottom: 0;
+      right: 0;
+    }
+    &:before {
+      content: '';
+      background: var(--app-color-grad);
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 100%;
+    }
+  }
+}
+
