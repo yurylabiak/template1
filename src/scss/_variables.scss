@@ -1,0 +1,140 @@
+$primary-color: var(--ion-color-primary);
+$red: #c40000;
+$white: #ffffff;
+$whs: whitesmoke;
+$grey: #a2a2a2;
+$bgrey: #ecebeb;
+$success: var(--ion-color-success);
+$main-background-color: #fafafa;
+
+:root {
+    --ion-color-primary: #3e8c6e;
+    --ion-color-primary-rgb: 114,202,47;
+    --ion-color-primary-contrast: #ffffff;
+    --ion-color-primary-contrast-rgb: 255,255,255;
+    --ion-color-primary-shade: #002e7e;
+    --ion-color-primary-tint: #002e7e;
+
+    --ion-color-secondary: #ffce00;
+    --ion-color-secondary-rgb: 255,206,0;
+    --ion-color-secondary-contrast: #ffffff;
+    --ion-color-secondary-contrast-rgb: 255,255,255;
+    --ion-color-secondary-shade: #e0b500;
+    --ion-color-secondary-tint: #ffd31a;
+
+    --ion-color-tertiary: #f05522;
+    --ion-color-tertiary-rgb: 240,85,34;
+    --ion-color-tertiary-contrast: #ffffff;
+    --ion-color-tertiary-contrast-rgb: 255,255,255;
+    --ion-color-tertiary-shade: #d34b1e;
+    --ion-color-tertiary-tint: #f26638;
+
+    --ion-color-success: #00c851;
+    --ion-color-success-rgb: 16,220,96;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255,255,255;
+    --ion-color-success-shade: #0ec254;
+    --ion-color-success-tint: #28e070;
+
+    --ion-color-warning: #0f8fff;
+    --ion-color-warning-rgb: 15,143,255;
+    --ion-color-warning-contrast: #ffffff;
+    --ion-color-warning-contrast-rgb: 255,255,255;
+    --ion-color-warning-shade: #0d7ee0;
+    --ion-color-warning-tint: #279aff;
+
+    --ion-color-danger: #ca2e2e;
+    --ion-color-danger-rgb: 202,46,46;
+    --ion-color-danger-contrast: #ffffff;
+    --ion-color-danger-contrast-rgb: 255,255,255;
+    --ion-color-danger-shade: #b22828;
+    --ion-color-danger-tint: #cf4343;
+
+    --ion-color-dark: rgba(34,36,40,0.7);
+    --ion-color-dark-rgb: rgba(34,36,40,0.7);
+    --ion-color-dark-contrast: rgba(255,255,255,0.7);
+    --ion-color-dark-contrast-rgb: rgba(255,255,255,0.7);
+    --ion-color-dark-shade: rgba(30,32,35,0.7);
+    --ion-color-dark-tint: rgba(56,58,60,0.7);
+
+    --ion-color-medium: #253447;
+    --ion-color-medium-rgb: 32, 52, 71;
+    --ion-color-medium-contrast: #ffffff;
+    --ion-color-medium-contrast-rgb: #ffffff;
+    --ion-color-medium-shade: #212e3e;
+    --ion-color-medium-tint: #3b4859;
+
+    --ion-color-light: rgba(244,245,248,0.7);
+    --ion-color-light-rgb: rgba(244,245,248,0.7);
+    --ion-color-light-contrast: rgba(0,0,0,0.7);
+    --ion-color-light-contrast-rgb: rgba(0,0,0,0.7);
+    --ion-color-light-shade: rgba(215,216,218,0.7);
+    --ion-color-light-tint: rgba(245,246,249,0.7);
+
+    --app-color-grad: linear-gradient(45deg, #223C69 0%,#48A770 75%);
+    --app-color-grad-rgb: linear-gradient(45deg, #3e8c6e 0%,#102013 75%);
+    --app-color-grad-contrast: #ffffff;
+    --app-color-grad-contrast-rgb: 255, 255, 255;
+    --app-color-grad-shade: linear-gradient(45deg, #3e8c6e 0%,#102013 75%);
+    --app-color-grad-tint: linear-gradient(45deg, #3e8c6e 0%,#102013 75%);
+
+    --app-color-toolbar: #253447;
+    --app-color-toolbar-rgb: 37,52,71;
+    --app-color-toolbar-contrast: #ffffff;
+    --app-color-toolbar-contrast-rgb: 255,255,255;
+    --app-color-toolbar-shade: #212e3e;
+    --app-color-toolbar-tint: #3b4859;
+
+    --normal-button-height: 45px;
+    --normal-font-size: 16px;
+}
+
+a {
+    color: $primary-color;
+    font-weight: bold;
+}
+// *******customize form-field********
+// .mat-form-field-label {
+//     /*change color of label*/
+//     color: $primary-color !important;
+// }
+.mat-focused {
+    /*change color of label*/
+    color: $primary-color !important;
+}
+// .mat-form-field-underline {
+// /*change color of underline*/
+//     background-color: $primary-color !important;
+// } 
+
+.mat-form-field-ripple {
+/*change color of underline when focused*/
+    background-color: $primary-color !important;;
+}
+
+// **********customize mat-button************
+.mat-button.mat-success,
+.mat-stroked-button.mat-success {
+    color: #155724;
+}
+.mat-button.mat-success:hover,
+.mat-stroked-button.mat-success:hover {
+  background-color: #f0fff3;
+}
+
+.mat-raised-button.mat-success,
+.mat-flat-button.mat-success,
+.mat-fab.mat-success,
+.mat-mini-fab.mat-success {
+  color: #f0fff3;
+  background-color: $primary-color;
+}
+
+.mat-icon-button.mat-success {
+  color: var(--app-color-grad);
+}
+
+// ********customize checkbox*********
+.mat-checkbox-checked .mat-checkbox-background, .mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: $primary-color !important;
+}
