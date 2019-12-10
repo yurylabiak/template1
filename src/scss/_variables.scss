@@ -90,10 +90,14 @@ $main-background-color: #fafafa;
 }
 
 a {
-    color: $primary-color;
+    color: grey;
     font-weight: bold;
 }
+
+
+
 // *******customize form-field********
+
 // .mat-form-field-label {
 //     /*change color of label*/
 //     color: $primary-color !important;
@@ -112,6 +116,46 @@ a {
     background-color: $primary-color !important;;
 }
 
+.normal-outline-input {
+  .mat-form-field-infix {
+    border-top-width: 3px !important;
+  }
+}
+
+.mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+  transform: none !important;
+}
+
+.mat-label {
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+/* no padding no margin field*/
+.no-padding-margin-field {
+  .mat-form-field-wrapper {
+    padding-bottom: 0px;
+    margin: 0px !important;
+  }
+  .mat-form-field-suffix {
+    top: 0px !important;
+  }
+}
+
+.no-margin-field {
+  .mat-form-field-wrapper {
+    margin: 0px !important;
+  }
+  .mat-form-field-suffix {
+    top: 0px !important;
+  }
+}
+
+
+// ********************************************
 // **********customize mat-button************
 .mat-button.mat-success,
 .mat-stroked-button.mat-success {
@@ -137,4 +181,68 @@ a {
 // ********customize checkbox*********
 .mat-checkbox-checked .mat-checkbox-background, .mat-checkbox-indeterminate .mat-checkbox-background {
   background-color: $primary-color !important;
+}
+// **************************************
+
+// ********radio button***********
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{
+  border-color: $primary-color !important; 
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{
+  color: $primary-color !important;
+  background-color: $primary-color !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    background-color: $primary-color !important;
+}
+// ***************************************
+
+// ******define all title style******
+.title-text {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.subtitle-text {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+}
+// ********************************
+
+// *****page name font define*********
+.page-name {
+  margin: 0px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  span {
+    font-size: 35px;
+  }
+  .underline {
+    text-decoration: underline;
+  }
+}
+// **************************************
+
+.page-subname {
+  margin: 0;
+  font-size: 20px;
+  span {
+    font-size: 28px;
+    // font-weight: bold;
+    color: grey;
+  }
+}
+
+.normal-font-color {
+  color: $primary-color;
+}
+
+.password-warning {
+  font-size: 14px;
+  color: red;
 }

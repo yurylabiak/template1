@@ -18,6 +18,14 @@ const routes: Routes = [
     loadChildren: () => import('./signin/signin.module').then(m => m.SigninModule)
   },
   {
+    path: 'pwdreset',
+    loadChildren: () => import('./pwd-reset/pwd-reset.module').then(m => m.PwdResetModule)
+  },
+  {
+    path: 'payment',
+    loadChildren: () => import('./payment-gateway/payment-gateway.module').then(m => m.PaymentGatewayModule)
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
   }

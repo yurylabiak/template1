@@ -11,10 +11,10 @@
         </div>
 
         <div class="col-6 ">
-            <form [formGroup]="loginForm" class="login-form" (ngSubmit)="onLogin()">
+            <form [formGroup]="loginForm" class="login-form" (ngSubmit)="signup()">
                 <div class="text-left">
                     <p class="page-name"><a href="javascript:void(0)"><span class="normal-font-color underline">Sign Up</span></a> &nbsp; Or &nbsp;
-                        <a href="javascript:void(0)"><span class="underline">Sign In</span></a></p>
+                        <a href="/signin"><span class="underline">Sign In</span></a></p>
                 </div>
                 <div fxLayout="row">
                     <div fxFlexFill>
@@ -58,8 +58,8 @@
                         </mat-form-field>
                     </div>
                 </div>
-                <mat-checkbox class="term-checkbox" color="primary">I have read and I agree to the <a
-                        href="javascript:void(0)">Terms</a> and <a href="javascript:void(0)">Privacy</a> details
+                <mat-checkbox class="term-checkbox" color="primary">I have read and I agree to the 
+                    <a href="javascript:void(0)"><span class="normal-font-color">Terms</span></a> and <a href="javascript:void(0)"><span class="normal-font-color">Privacy</span></a> details
                 </mat-checkbox>
                 <button class="sign-btn mb-3" type="submit" mat-raised-button color="success">Sing Up</button>
             </form>

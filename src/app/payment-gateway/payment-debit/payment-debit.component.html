@@ -1,0 +1,84 @@
+<div class="main-page">
+    <div class="content row align-content-center px20">
+        <img class="logo" src="assets/images/CBN-Expert-Logo.png" />
+
+        <div class="col-6 text-center">
+            <div class="title-area">
+                <p class="title-text">Join us on the journey to<br> a low carbon future.</p>
+                <img src="assets/images/big-tree.png" />
+            </div>
+        </div>
+
+        <div class="col-6 ">
+            <form [formGroup]="mainForm" class="login-form" (ngSubmit)="directDebit()">
+                <div class="text-left">
+                    <p class="page-name"><a href="/payment"><span class="normal-font-color underline">Direct Debit</span></a> &nbsp; Or &nbsp;
+                        <a href="/payment/card"><span class="underline">Card Payment</span></a>
+                    </p>
+                </div>
+                <div fxLayout="row">
+                    <div fxFlexFill>
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-12">
+                                <label class="mat-label">Subscription</label>
+                                <mat-radio-group aria-label="Select an option" value="1">
+                                    <div></div>
+                                    <mat-radio-button value="1" style="margin-right: 20px;">Monthly Plan (£15)</mat-radio-button>
+                                    <mat-radio-button value="2">Annual Plan (£153) <span class="normal-font-color" style="font-weight: bold;">Save 15%</span></mat-radio-button>
+                                </mat-radio-group>
+                            </div>
+                        </div>
+                        
+                        <label class="mat-label">Name of Account Holder</label>
+                        <mat-form-field appearance="outline" class="w-100 normal-outline-input">
+                            <input formControlName="accountHolder" matInput placeholder="">
+                            <mat-error>
+                                <span *ngIf="formController.accountHolder.hasError('required')">Please enter a valid Name of Account Holder</span>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <div class="row">
+                            <div class="col-7">
+                                <label class="mat-label">Account Number</label>
+                                <mat-form-field appearance="outline" class="w-100 normal-outline-input">
+                                    <input formControlName="accountNumber" matInput placeholder="e.g. 12345678">
+                                    <mat-error>
+                                        <span *ngIf="formController.accountNumber.hasError('required')">Please enter a valid Account Number</span>
+                                    </mat-error>
+                                </mat-form-field>                            
+                            </div>
+                            <div class="col-5">
+                                <label class="mat-label">Sort Code</label>
+                                <mat-form-field appearance="outline" class="w-100 normal-outline-input">
+                                    <input formControlName="sortCode" matInput placeholder="e.g. 10-20-30"
+                                        (ngModelChange)="updateValue()">
+                                    <mat-error>
+                                        <span *ngIf="formController.sortCode.hasError('required')">Please enter a valid Sort Code</span>
+                                    </mat-error>
+                                </mat-form-field>                            
+                            </div>                            
+                        </div>
+
+                        <label class="mat-label">Country</label>
+                        <mat-form-field appearance="outline" class="w-100 normal-outline-input">
+                            <mat-select [(value)]="states[0]">
+                                <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+
+                        <label class="mat-label">Billing Address</label>
+                        <mat-form-field appearance="outline" class="w-100 normal-outline-input">
+                            <input type="text" placeholder="" aria-label="Number" [formControl]="myControl" matInput [matAutocomplete]="auto">
+                            <mat-autocomplete #auto="matAutocomplete">
+                                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                {{option}}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button class="sign-btn mb-3" type="submit" mat-raised-button color="success"><mat-icon style="font-size: 18px;" [inline]="true" matPrefix>lock</mat-icon> Set Up Direct Debit</button>
+            </form>
+        </div>
+    </div>
+</div>

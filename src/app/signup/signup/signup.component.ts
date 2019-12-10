@@ -42,9 +42,10 @@ export class SignupComponent implements OnInit {
     return pass === confirmPass ? null : { notSame: true }     
   }
 
-  onLogin() {
-    localStorage.setItem('isLoggedin', 'true');
-    this.router.navigate(['/dashboard']);
+  signup() {
+    // localStorage.setItem('isLoggedin', 'true');
+    // this.router.navigate(['/dashboard']);
+    this.router.navigate(['/signup/agree']);
   }
 
 }

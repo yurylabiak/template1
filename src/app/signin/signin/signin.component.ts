@@ -31,4 +31,9 @@ export class SigninComponent implements OnInit {
   get formController() {
     return this.loginForm.controls
   }
+
+  signin() {
+    localStorage.setItem('isLoggedin', 'true');
+    this.router.navigate(['/dashboard']);
+  }
 }
