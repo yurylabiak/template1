@@ -36,6 +36,9 @@
               {
                 "input": "node_modules/angular-bootstrap-md/assets/scss/mdb.scss"
               },
+              {
+                "input": "node_modules/roboto-fontface/css/roboto/roboto-fontface.css"
+              },
               "src/styles.scss"
             ],
             "scripts": [{
